@@ -1,19 +1,30 @@
-.jumbotron {
-    background-image: url(../imgs/jared-tomasek-_j65wtWbMbs-unsplash.jpg);
-    background-size: cover;
-    background-position: 50% 30%;
-    padding-top:10rem;
-    color:white;
 
-}
 
-.jumbotron h2{
+.carousel-overlay {
     font-family: 'Major Mono Display', monospace;
     background-color:rgba(0,0,0,0.5);
     margin:2rem;
+    margin-top: 15rem;
     padding:2rem;
+    position: absolute;
+    z-index:100;
+    color:white;
 }
   
+
+
+.carousel-img-control{
+    object-position: 50% 30%;
+    height: 25rem;
+    object-fit: cover;
+}
+
+.carousel-img-control2{
+    object-position: 50% 40%;
+    height: 25rem;
+    object-fit: cover;
+}
+
 
 .featured-thumbnail{
     
@@ -47,7 +58,9 @@ padding:0;
 }
 
 .content{
+    padding-top:2rem;
     padding-bottom:8rem;
+    padding-left:.5rem;
 }
 
 .content a:hover{
@@ -55,7 +68,92 @@ padding:0;
     transition: opacity 0.3s, visibility 0.5s;
 }
 
+.shopping-cart a{
+    color:white;
+    font-size:1.25rem;
 
-.product-listing {
+}
+       
+
+.hours ul {
+    list-style-type: none;
+}
+
+
+.product-thumbnail{
+    
+    width:25rem;
+    height:25rem;
+    
+    object-fit:cover;
+    padding:.25rem .25rem;
+    margin:0;
+}
+
+.signup{
+    background-color:blue;
+    color:white;
+}
+
+.product-page-img{
+    width:100%;
+}
+
+.product-page-h3{
+    font-family: 'EB Garamond', serif;
+}
+
+.product-page-h4{
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#shipping{
+    font-size:.8rem;
+    font-weight:bold;
+}
+
+.product-overlay{
+    
+    background-color:rgba(255,255,255,0.75);
+    
+    bottom: .8rem;
+    right: .8rem;
+    font-weight:bold;
+    font-size:1.5rem;
+    padding:1.25rem;
+    position: absolute;
+    z-index:100;
+    color:black;
+}
+.signUpModalClose{
+    color:white;
+}
+
+
+.product-overlay-price{
+    
+    background-color:rgba(209, 2, 2, 0.75);
+    
+    top: .8rem;
+    left: .8rem;
+    font-weight:bold;
+    font-size:1.5rem;
+    padding:1.25rem;
+    position: absolute;
+    z-index:100;
+    color:white;
+   
+}
+
+.product-listing{
+    padding-bottom:7rem;
+    
+    
+    
+}
+
+.product-listing h4{
+    font-size:4rem;
+    padding-bottom:2.5rem;
     
 }

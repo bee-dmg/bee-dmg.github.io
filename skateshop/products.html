@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/styles.css" />
 
     <title>Bob's Skateshop</title>
@@ -30,11 +33,9 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
                 </li>
-                <!-- <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li> -->
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -51,73 +52,511 @@
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="products.html#clothing">Clothing</a>
                         <a class="dropdown-item" href="products.html#shoes">Shoes</a>
-                        <a class="dropdown-item" href="products.html#hats">Hats</a>
+
                     </div>
                 </li>
                 <a class="nav-link" href="about.html">About</a>
                 <a class="nav-link" href="contact.html">Contact</a>
             </ul>
+
+            <button class="btn btn-light mx-lg-2" data-toggle="modal" data-target="#loginModal">Login</button>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn btn-dark my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
             </form>
+            <div class="shopping-cart"><button class="btn btn-dark" data-toggle="modal"
+                    data-target="#shoppingCartModal"><a href="#"><i class="fa fa-shopping-cart"></i></a></button>
+            </div>
         </div>
     </nav>
+    <div class="modal fade" id="shoppingCartModal" tabindex="-1" role="dialog" aria-labelledby="shoppingCartModal"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Shopping Cart</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <form action="submit">
+                            <div class="row">
+                                <div class="col-3"> </div>
+                                <div class="col-3 col-form-label">Item</div>
+                                <div class="col-2 col-form-label">Price</div>
+                                <div class="col-2"><label for="qtySelectCheckout"
+                                    class="col-form-label">Qty</label></div>
+                                <div class="col-2"> </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-3"> <img src="imgs/priyanuch-konkaew-wYG0QiyhrVY-unsplash.jpg"
+                                        class="img-thumbnail"></div>
+                                <div class="col-3 align-self-center">Plastic Complete</div>
+                                <div class="col-2 align-self-center">$29.99</div>
+                                <div class="col-2 align-self-center"><select class="form-control"
+                                        id="qtySelectCheckout">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select></div>
+                                <div class="col-1 align-self-center"><a href="#"><i class="fa fa-trash"></i> </a></div>
+                            </div>
 
-    <div class="jumbotron">
-        <div class="row">
-            <div class=" col-sm-12 col-md-8 col-lg-5 col-xl-4">
-                <h2> Bob's Skateshop</h2>
+
+
+
+                            <div class="row form-group">
+                                <div class="col-3"> <img src="imgs/the-nigmatic-4B6pzUjkYBo-unsplash.jpg"
+                                        class="img-thumbnail"></div>
+                                <div class="col-3 align-self-center">Black Wheels</div>
+                                <div class="col-2 align-self-center">$29.99</div>
+                                <div class="col-2 align-self-center"><select class="form-control"
+                                        id="qtySelectCheckout">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select></div>
+                                <div class="col-1 align-self-center"><a href="#"><i class="fa fa-trash"></i> </a></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Checkout</button>
+                </div>
             </div>
         </div>
     </div>
 
+
+
+
+
+
+
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="inputEmail">Email address</label>
+                            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
+                                placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword">Password</label>
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check1">
+                            <label class="form-check-label" for="check1">Remember password?</label>
+                        </div>
+
+
+                        <div class="mt-3">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                            <a href="#signupModal" data-toggle="modal"><button type="button"
+                                    class="float-right btn btn-success" id="signupButton">Sign
+                                    Up</button></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header signup">
+                    <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="signUpModalClose">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="inputEmail">Email address</label>
+                            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
+                                placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword">Password</label>
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check1">
+                            <label class="form-check-label" for="check1">Remember password?</label>
+                        </div>
+
+
+                        <div class="mt-3">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                            <button type="submit" formaction="signup.html" class="btn btn-success">Sign
+                                Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="row">
+        <div class="col-sm-12 col-md-8 col-lg-5 col-xl-4 carousel-overlay">
+            <h2> Bob's Skateshop</h2>
+        </div>
+    </div>
+
+
+    <div class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100 carousel-img-control" src="imgs/jared-tomasek-_j65wtWbMbs-unsplash.jpg"
+                    alt="First slide">
+
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100 carousel-img-control2"
+                    src="imgs/mateo-avila-chinchilla-Yt2bU-A088w-unsplash.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100 carousel-img-control" src="imgs/izzy-park-ETqZh_Oe5iE-unsplash.jpg"
+                    alt="Third slide">
+            </div>
+        </div>
+    </div>
+
+
+
+
     <div class="container">
         <div class="content">
-            <div class="row">
-                Products
-            </div>
+
 
             <div class="row product-listing" id="completes">
                 <h4>Completes</h4>
-          <div class="row">
-            <div class="col product-col">
-              <a href="#"><img src="imgs/priyanuch-konkaew-wYG0QiyhrVY-unsplash.jpg" alt=""
-                  class="product-thumbnail img-fluid"></a>
-              <a href="#"><img src="imgs/maksym-zakharyak-IjPWFZncmxs-unsplash.jpg" alt=""
-                  class="product-thumbnail img-fluid"></a>
-              <a href="#"><img src="imgs/zachary-staines-jhMt5TTqJS0-unsplash.jpg" alt=""
-                  class="product-thumbnail img-fluid"></a>
-            </div>
-            <div class="col-4 product-col">
-              <a href="#"> <img src="imgs/joe-ciciarelli-FwVnAY_xMaY-unsplash.jpg" alt=""
-                  class="product-thumbnail img-fluid"></a>
-                  <a href="#"> <img src="imgs/hello-i-m-nik-wMMfcoH2j-o-unsplash.jpg" alt=""
-                    class="product-thumbnail img-fluid"></a>
-              <a href="#"> <img src="imgs/yangbeiyao-yu-XQcQcHfppo4-unsplash.jpg" alt=""
-                  class="product-thumbnail img-fluid"></a>
-              
+                <div class="row">
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"><img src="imgs/priyanuch-konkaew-wYG0QiyhrVY-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Plastic Board Complete</div>
+                        <div class="product-overlay-price">$29.99</div>
+                    </div>
+
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"><img src="imgs/zachary-staines-jhMt5TTqJS0-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Flamingo Complete 8"</div>
+                        <div class="product-overlay-price">$89.99</div>
+                    </div>
+
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"> <img src="imgs/hello-i-m-nik-wMMfcoH2j-o-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Tucan Complete 8.25"</div>
+                        <div class="product-overlay-price">$89.99</div>
+                    </div>
+
+
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"> <img src="imgs/niket-nigde-9N3rS-xLfkI-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Hands Complete 8.5"</div>
+                        <div class="product-overlay-price">$109.99</div>
+                    </div>
+
+                </div>
 
             </div>
-            <div class="col-4 product-col">
-              <a href="#"> <img src="imgs/maxwell-nelson-1iFe4x06qwc-unsplash.jpg" alt=""
-                  class="product-thumbnail img-fluid"></a>
-              <a href="#"> <img src="imgs/niket-nigde-9N3rS-xLfkI-unsplash.jpg" alt=""
-                  class="product-thumbnail img-fluid"></a>
-                  <a href="#"> <img src="imgs/chris-haws-1qOU_X8h7hw-unsplash.jpg" alt=""
-                    class="product-thumbnail img-fluid"></a>
-            </div>
-          </div>
+            <div class="row product-listing" id="decks">
+                <h4>Decks</h4>
+                <div class="row">
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"><img src="imgs/luis-arias-e5uBYJkgjQU-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Painterly Deck 8.25"</div>
+                        <div class="product-overlay-price">$59.99</div>
+                    </div>
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"><img src="imgs/oleg-gospodarec-tYtabHRAYw0-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Born to Ride 7" Cruiser Deck</div>
+                        <div class="product-overlay-price">$49.99</div>
+                    </div>
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"><img src="imgs/yangbeiyao-yu-XQcQcHfppo4-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Lion 8.5" Deck</div>
+                        <div class="product-overlay-price">$64.99</div>
+                    </div>
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"> <img src="imgs/chris-stein-x_4q8AapBbk-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Not Stressed 8" Deck</div>
+                        <div class="product-overlay-price">$59.99</div>
+                    </div>
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"><img src="imgs/maksym-zakharyak-IjPWFZncmxs-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Wood Cream 8.125" Deck</div>
+                        <div class="product-overlay-price">$59.99</div>
+                    </div>
+
+                </div>
+
+
+
 
             </div>
-            <div class="row product-listing" id="decks">Decks</div>
-            <div class="row product-listing" id="trucks">Trucks</div>
-            <div class="row product-listing" id="wheels">Wheels</div>
-            <div class="row product-listing" id="bearings">Bearings</div>
-            <div class="row product-listing" id="accessories">Accessories</div>
-            <div class="row product-listing" id="clothing">Clothing</div>
-            <div class="row product-listing" id="shoes">Shoes</div>
-            <div class="row product-listing" id="hats">Hats</div>
+            <div class="row product-listing" id="trucks">
+                <h4>Trucks</h4>
+                <div class="row">
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"><img src="imgs/travis-jones-ovwpmi_G3zE-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Silver Trucks 8"</div>
+                        <div class="product-overlay-price">$49.99</div>
+                    </div>
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"><img src="imgs/nathan-dumlao-hMnwfpg_u6A-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Silver Trucks 8.5"</div>
+                        <div class="product-overlay-price">$49.99</div>
+                    </div>
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"><img src="imgs/gabrielle-meschini-fvIshUFYs8I-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Black & Red Trucks</div>
+                        <div class="product-overlay-price">$49.99</div>
+                    </div>
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"> <img src="imgs/ryland-dean-g5IwIhDAjQg-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">White Trucks</div>
+                        <div class="product-overlay-price">$49.99</div>
+                    </div>
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"> <img src="imgs/keaton-dickinson-GYpaddU1cXs-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Black Trucks</div>
+                        <div class="product-overlay-price">$49.99</div>
+                    </div>
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"> <img src="imgs/harrison-kugler-wUEpTTjlnJs-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Splatter Trucks</div>
+                        <div class="product-overlay-price">$49.99</div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="row product-listing" id="wheels">
+                <h4>Wheels</h4>
+                <div class="row">
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"><img src="imgs/the-nigmatic-4B6pzUjkYBo-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Black Wheels</div>
+                        <div class="product-overlay-price">$29.99</div>
+                    </div>
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"><img src="imgs/colton-sturgeon-XqaH94nwtSM-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Off-Road Wheels</div>
+                        <div class="product-overlay-price">$49.99</div>
+                    </div>
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"><img src="imgs/quinton-coetzee-Vc1x6tKeGf8-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">White Wheels</div>
+                        <div class="product-overlay-price">$29.99</div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+            <div class="row product-listing" id="bearings">
+
+                <h4>Bearings</h4>
+                <div class="row">
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"><img src="imgs/pexels-ovidio-rey-163909.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Ultra Bearings</div>
+                        <div class="product-overlay-price">$49.99</div>
+                    </div>
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"><img src="imgs/pexels-cottonbro-4929028.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Great Bearings</div>
+                        <div class="product-overlay-price">$29.99</div>
+                    </div>
+                    <div class="col-6 col-md-4 product-col">
+
+                        <a href="product_page.html"><img src="imgs/pexels-budgeron-bach-5157775.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Good Bearings</div>
+                        <div class="product-overlay-price">$15.99</div>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+            <div class="row product-listing" id="accessories">
+                <h4>Accessories</h4>
+                <div class="row">
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"><img src="imgs/lazar-gugleta-IVT4-mJKTc8-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Tech Decks</div>
+                        <div class="product-overlay-price">$4.99</div>
+                    </div>
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"><img src="imgs/nick-page-XMg8GBzNmgA-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Socks</div>
+                        <div class="product-overlay-price">$14.99</div>
+                    </div>
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"><img src="imgs/ibrahim-boran-L06w0Qkjgmc-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Masks</div>
+                        <div class="product-overlay-price">$9.99</div>
+                    </div>
+
+                </div>
+
+
+
+
+
+            </div>
+            <div class="row product-listing" id="clothing">
+                <h4>Clothing</h4>
+                <div class="row">
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"><img src="imgs/michael-demoya-Dwl-zp3Os5M-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Octopus Black Tee</div>
+                        <div class="product-overlay-price">$24.99</div>
+                    </div>
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"><img src="imgs/nijwam-swargiary-fk4e0R8Xw9I-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Burgundy Tee</div>
+                        <div class="product-overlay-price">$24.99</div>
+                    </div>
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"><img src="imgs/ian-dooley-wzRKn-AjKf4-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Skeleton Hand Tee</div>
+                        <div class="product-overlay-price">$24.99</div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="row product-listing" id="shoes">
+                <h4>Shoes</h4>
+                <div class="row">
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"><img src="imgs/rachel-martin-FVq0wqYu0yc-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Black Shoes</div>
+                        <div class="product-overlay-price">$84.99</div>
+                    </div>
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"><img src="imgs/eduardo-freitas-OEvc435YtAY-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Striped Black Shoes</div>
+                        <div class="product-overlay-price">$64.99</div>
+                    </div>
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"><img src="imgs/jenna-ebert-1HaYVcACDwc-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Ice Cream Slip-On Shoes</div>
+                        <div class="product-overlay-price">$49.99</div>
+                    </div>
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"> <img src="imgs/paul-gaudriault-a-QH9MAAVNI-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Burgundy Shoes</div>
+                        <div class="product-overlay-price">$59.99</div>
+                    </div>
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"> <img src="imgs/kristian-egelund-vJgJLzWmXDA-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Kelly Green Shoes</div>
+                        <div class="product-overlay-price">$59.99</div>
+                    </div>
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"> <img src="imgs/mutzii-fmDCrqPQKog-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Orange Shoes</div>
+                        <div class="product-overlay-price">$59.99</div>
+
+
+                    </div>
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"> <img src="imgs/maxwell-nelson-1iFe4x06qwc-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Grey Hi-Top Shoes</div>
+                        <div class="product-overlay-price">$69.99</div>
+                    </div>
+                    <div class="col-6 col-md-4 product-col">
+                        <a href="product_page.html"> <img src="imgs/chris-haws-1qOU_X8h7hw-unsplash.jpg" alt=""
+                                class="product-thumbnail img-fluid"></a>
+                        <div class="product-overlay">Sparkle Shoes</div>
+                        <div class="product-overlay-price">$59.99</div>
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
     </div>
 

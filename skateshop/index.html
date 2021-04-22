@@ -2,143 +2,342 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
 
-  <!-- Additional CSS must be placed after Boostrap CSS -->
-  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css" />
+    <!-- Additional CSS must be placed after Boostrap CSS -->
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap" rel="stylesheet">
 
-  <title>Bob's Skateshop</title>
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>Bob's Skateshop</title>
 </head>
 
 <body>
 
-  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Bob's Skateshop</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Bob's Skateshop</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <!-- <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li> -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Products
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="products.html#decks">Decks</a>
-            <a class="dropdown-item" href="#">Trucks</a>
-            <a class="dropdown-item" href="#">Wheels</a>
-            <a class="dropdown-item" href="#">Bearings</a>
-            <a class="dropdown-item" href="#">Accessories</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
 
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Clothing</a>
-            <a class="dropdown-item" href="#">Shoes</a>
-            <a class="dropdown-item" href="#">Hats</a>
-          </div>
-        </li>
-        <a class="nav-link" href="about.html">About</a>
-        <a class="nav-link" href="contact.html">Contact</a>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Products
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="products.html#completes">Completes</a>
+                        <a class="dropdown-item" href="products.html#decks">Decks</a>
+                        <a class="dropdown-item" href="products.html#trucks">Trucks</a>
+                        <a class="dropdown-item" href="products.html#wheels">Wheels</a>
+                        <a class="dropdown-item" href="products.html#bearings">Bearings</a>
+                        <a class="dropdown-item" href="products.html#accessories">Accessories</a>
 
-  <div class="jumbotron">
-    <div class="row">
-      <div class=" col-sm-12 col-md-8 col-lg-5 col-xl-4">
-        <h2> Bob's Skateshop</h2>
-      </div>
-    </div>
-  </div>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="products.html#clothing">Clothing</a>
+                        <a class="dropdown-item" href="products.html#shoes">Shoes</a>
 
-  <div class="container">
-    <div class="content">
-      <div class="row">
-        <div class="col-lg-6">
-          <h4>Featured Products</h4>
-          <div class="row">
-            <div class="col-4 product-col">
-              <a href="#"><img src="imgs/priyanuch-konkaew-wYG0QiyhrVY-unsplash.jpg" alt=""
-                  class="featured-thumbnail img-fluid"></a>
-              <a href="#"><img src="imgs/maksym-zakharyak-IjPWFZncmxs-unsplash.jpg" alt=""
-                  class="featured-thumbnail img-fluid"></a>
-              <a href="#"><img src="imgs/zachary-staines-jhMt5TTqJS0-unsplash.jpg" alt=""
-                  class="featured-thumbnail img-fluid"></a>
+                    </div>
+                </li>
+                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+            </ul>
+
+            <button class="btn btn-light mx-lg-2" data-toggle="modal" data-target="#loginModal">Login</button>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-dark my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <div class="shopping-cart"><button class="btn btn-dark" data-toggle="modal"
+                    data-target="#shoppingCartModal"><a href="#"><i class="fa fa-shopping-cart"></i></a></button>
             </div>
-            <div class="col-4 product-col">
-              <a href="#"> <img src="imgs/joe-ciciarelli-FwVnAY_xMaY-unsplash.jpg" alt=""
-                  class="featured-thumbnail img-fluid"></a>
-              <a href="#"> <img src="imgs/yangbeiyao-yu-XQcQcHfppo4-unsplash.jpg" alt=""
-                  class="featured-thumbnail img-fluid"></a>
-              <a href="#"> <img src="imgs/chris-haws-1qOU_X8h7hw-unsplash.jpg" alt=""
-                  class="featured-thumbnail img-fluid"></a>
-
-            </div>
-            <div class="col-4 product-col">
-              <a href="#"> <img src="imgs/maxwell-nelson-1iFe4x06qwc-unsplash.jpg" alt=""
-                  class="featured-thumbnail img-fluid"></a>
-              <a href="#"> <img src="imgs/niket-nigde-9N3rS-xLfkI-unsplash.jpg" alt=""
-                  class="featured-thumbnail img-fluid"></a>
-              <a href="#"> <img src="imgs/hello-i-m-nik-wMMfcoH2j-o-unsplash.jpg" alt=""
-                  class="featured-thumbnail img-fluid"></a>
-            </div>
-          </div>
         </div>
+    </nav>
+    <div class="modal fade" id="shoppingCartModal" tabindex="-1" role="dialog" aria-labelledby="shoppingCartModal"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Shopping Cart</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <form action="submit">
+                            <div class="row">
+                                <div class="col-3"> </div>
+                                <div class="col-3 col-form-label">Item</div>
+                                <div class="col-2 col-form-label">Price</div>
+                                <div class="col-2"><label for="qtySelectCheckout"
+                                    class="col-form-label">Qty</label></div>
+                                <div class="col-2"> </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-3"> <img src="imgs/priyanuch-konkaew-wYG0QiyhrVY-unsplash.jpg"
+                                        class="img-thumbnail"></div>
+                                <div class="col-3 align-self-center">Plastic Complete</div>
+                                <div class="col-2 align-self-center">$29.99</div>
+                                <div class="col-2 align-self-center"><select class="form-control"
+                                        id="qtySelectCheckout">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select></div>
+                                <div class="col-1 align-self-center"><a href="#"><i class="fa fa-trash"></i> </a></div>
+                            </div>
 
-        <div class="col-lg-6">
-          <h4>Featured Videos </h4>
+
+
+
+                            <div class="row form-group">
+                                <div class="col-3"> <img src="imgs/the-nigmatic-4B6pzUjkYBo-unsplash.jpg"
+                                        class="img-thumbnail"></div>
+                                <div class="col-3 align-self-center">Black Wheels</div>
+                                <div class="col-2 align-self-center">$29.99</div>
+                                <div class="col-2 align-self-center"><select class="form-control"
+                                        id="qtySelectCheckout">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select></div>
+                                <div class="col-1 align-self-center"><a href="#"><i class="fa fa-trash"></i> </a></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Checkout</button>
+                </div>
+            </div>
         </div>
-      </div>
-
     </div>
-  </div>
 
-  <footer class="site-footer">
-  
+
+
+
+
+
+
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="inputEmail">Email address</label>
+                            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
+                                placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword">Password</label>
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check1">
+                            <label class="form-check-label" for="check1">Remember password?</label>
+                        </div>
+
+
+                        <div class="mt-3">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                            <a href="#signupModal" data-toggle="modal"><button type="button"
+                                    class="float-right btn btn-success" id="signupButton">Sign
+                                    Up</button></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header signup">
+                    <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="signUpModalClose">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="inputEmail">Email address</label>
+                            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
+                                placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword">Password</label>
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check1">
+                            <label class="form-check-label" for="check1">Remember password?</label>
+                        </div>
+
+
+                        <div class="mt-3">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                            <button type="submit" formaction="signup.html" class="btn btn-success">Sign
+                                Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
     <div class="row">
-      <div class="col-md-8 col-lg-9">
-        <a href="#"><i class="fa fa-instagram"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-youtube-play"></i></a>
-
-      </div>
-      <div class="col-md-4 col-lg-3">
-        <i class="fa fa-cc-amex"></i>
-        <i class="fa fa-cc-discover"></i>
-        <i class="fa fa-paypal"></i>
-        <i class="fa fa-cc-mastercard"></i>
-        <i class="fa fa-cc-visa"></i>
-      </div>
-      
+        <div class="col-sm-12 col-md-8 col-lg-5 col-xl-4 carousel-overlay">
+            <h2> Bob's Skateshop</h2>
+        </div>
     </div>
-    <div class="row">
-      <div class="col-md-8 col-lg-9"><h5 id="copyright">&COPY; Bob's Skateshop 2021</h5></div>
-    </div>
-  </footer>
 
-  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <div class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100 carousel-img-control" src="imgs/jared-tomasek-_j65wtWbMbs-unsplash.jpg"
+                    alt="First slide">
+
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100 carousel-img-control2"
+                    src="imgs/mateo-avila-chinchilla-Yt2bU-A088w-unsplash.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100 carousel-img-control" src="imgs/izzy-park-ETqZh_Oe5iE-unsplash.jpg"
+                    alt="Third slide">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container">
+        <div class="content">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h4>Featured Products</h4>
+                    <div class="row">
+                        <div class="col-4 product-col">
+                            <a href="product_page.html"><img src="imgs/priyanuch-konkaew-wYG0QiyhrVY-unsplash.jpg"
+                                    alt="" class="featured-thumbnail img-fluid"></a>
+                            <a href="product_page.html"><img src="imgs/maksym-zakharyak-IjPWFZncmxs-unsplash.jpg" alt=""
+                                    class="featured-thumbnail img-fluid"></a>
+                            <a href="product_page.html"><img src="imgs/zachary-staines-jhMt5TTqJS0-unsplash.jpg" alt=""
+                                    class="featured-thumbnail img-fluid"></a>
+                        </div>
+                        <div class="col-4 product-col">
+                            <a href="product_page.html"> <img src="imgs/nijwam-swargiary-fk4e0R8Xw9I-unsplash.jpg" alt=""
+                                    class="featured-thumbnail img-fluid"></a>
+                            <a href="product_page.html"> <img src="imgs/yangbeiyao-yu-XQcQcHfppo4-unsplash.jpg" alt=""
+                                    class="featured-thumbnail img-fluid"></a>
+                            <a href="product_page.html"> <img src="imgs/chris-haws-1qOU_X8h7hw-unsplash.jpg" alt=""
+                                    class="featured-thumbnail img-fluid"></a>
+
+                        </div>
+                        <div class="col-4 product-col">
+                            <a href="product_page.html"> <img src="imgs/maxwell-nelson-1iFe4x06qwc-unsplash.jpg" alt=""
+                                    class="featured-thumbnail img-fluid"></a>
+                            <a href="product_page.html"> <img src="imgs/niket-nigde-9N3rS-xLfkI-unsplash.jpg" alt=""
+                                    class="featured-thumbnail img-fluid"></a>
+                            <a href="product_page.html"> <img src="imgs/hello-i-m-nik-wMMfcoH2j-o-unsplash.jpg" alt=""
+                                    class="featured-thumbnail img-fluid"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <h4>Featured Videos </h4>
+                    <div class="row"> <video class="img-fluid" width="640" height="360" controls>
+                            <source src="imgs/video.mp4" type="video/mp4">
+                            <source src="imgs/video.webm" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video> </div>
+                    <div class="row"><video class="img-fluid" width="640" height="360" controls>
+                            <source src="imgs/video_2.mp4" type="video/mp4">
+                            <source src="imgs/video_2.webm" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video> </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="site-footer">
+
+        <div class="row">
+            <div class="col-md-8 col-lg-9">
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-youtube-play"></i></a>
+
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <i class="fa fa-cc-amex"></i>
+                <i class="fa fa-cc-discover"></i>
+                <i class="fa fa-paypal"></i>
+                <i class="fa fa-cc-mastercard"></i>
+                <i class="fa fa-cc-visa"></i>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-lg-9">
+                <h5 id="copyright">&COPY; Bob's Skateshop 2021</h5>
+            </div>
+        </div>
+    </footer>
+
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
